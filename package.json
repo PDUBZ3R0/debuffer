@@ -1,6 +1,6 @@
 {
   "name": "debuffer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "exports": {
     "./": "./index.js",
     "./debuffer": "./features/debuffer.js",
