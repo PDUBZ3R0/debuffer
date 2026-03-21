@@ -19,7 +19,7 @@ const START_LEVELS = {
 	$console: Levels.INFO 
 };
 
-export function debuffer (opts={ configfile, logsdir, onerror, onreject, levels=START_LEVELS }) {
+export function debuffer (opts={ configfile, logsdir, onerror, onreject, levels: START_LEVELS }) {
 
 	function loadfile(conf){
 		if (!conf) {
@@ -28,7 +28,7 @@ export function debuffer (opts={ configfile, logsdir, onerror, onreject, levels=
 			dirname += "5";
 			if (fs.existsSync(dirname)) enturn({ configfile: dirname })
 		} else {
-			enturn({ configfile: dirname, logsdir, onerror, onreject, levels=START_LEVELS })
+			enturn({ configfile: dirname, logsdir, onerror, onreject, levels })
 		}
 	}
 }
@@ -59,7 +59,7 @@ export function enturn ({ configfile, logsdir, onerror, onreject, levels=START_L
 	function log2all(msg, info) {
 		let lvl = { 
 			message: Levels[info.level.toUpperCase()],
-			setting: (typeof logsdir !== 'undefined') ? (info.logger === "console" ? levels.$console) : levels[info.logger] || levels.$default) : Levels.OFF,
+			setting: (typeof logsdir !== 'undefined') ? (info.logger === "console" ? levels.$console : levels[info.logger] || levels.$default) : Levels.OFF,
 			file() {
 				return this.setting >= this.message
 			}

@@ -35,7 +35,7 @@ export class StopWatch {
     customize({ hours='yellow', minutes='cyan', seconds='fuchsia', brackets='white', layout='[]' }){
         return function(){
             let timings = this.display();
-            return `${coloris[brackets](layout.substr(0, layout.length/2))}${coloris[hours](timings.hours)}:${coloris[minutes](timings.minutes)}:${coloris[seconds](timings.seconds)}${coloris[brackets](layout.substr(0, layout.length/2))}
+            return `${coloris[brackets](layout.substr(0, layout.length/2))}${coloris[hours](timings.hours)}:${coloris[minutes](timings.minutes)}:${coloris[seconds](timings.seconds)}${coloris[brackets](layout.substr(0, layout.length/2))}`
         }
     }
 }
