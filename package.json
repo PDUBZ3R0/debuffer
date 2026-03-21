@@ -2,7 +2,8 @@
   "name": "debuffer",
   "version": "1.0.0",
   "exports": {
-    "./": "./features/debuffer.js",
+    "./": "./index.js",
+    "./debuffer": "./features/debuffer.js",
     "./stopwatch": "./features/stopwatch.js",
     "./coloris": "./features/coloris.js",
     "./datadir": "./features/datadir.js",
