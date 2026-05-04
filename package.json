@@ -1,5 +1,5 @@
 {
-  "name": "@pdubz3r0/debuffing",
+  "name": "debuffing",
   "version": "1.0.1",
   "exports": {
     ".": "./index.js",
