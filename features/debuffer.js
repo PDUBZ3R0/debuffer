@@ -33,7 +33,7 @@ export function debuffing (opts={ configfile, logsdir, onerror, onreject, levels
 	}
 }
 
-export function enturn ({ configfile, logsdir, onerror, onreject, levels=START_LEVELS }) {
+function enturn ({ configfile, logsdir, onerror, onreject, levels=START_LEVELS }) {
 	let pathname = (()=>{
 		if (logsdir) {
 			let pn = locator(logsdir);
