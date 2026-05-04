@@ -1,5 +1,5 @@
 
-import { coloris } from './coloris';
+import { coloris } from './coloris.js';
 
 export class StopWatch {
     constructor() {
