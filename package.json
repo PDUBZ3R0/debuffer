@@ -1,6 +1,6 @@
 {
   "name": "debuffing",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "exports": {
     ".": "./index.js",
     "./debuffing": "./features/debuffer.js",
@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "chalk": "^5.4.1",
-    "gradient-string": "^3.0.0"
+    "gradient-string": "^3.0.0",
+    "json5": "^2.2.3"
   }
 }
