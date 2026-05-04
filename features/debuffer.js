@@ -19,11 +19,11 @@ const START_LEVELS = {
 	$console: Levels.INFO 
 };
 
-export function debuffer (opts={ configfile, logsdir, onerror, onreject, levels: START_LEVELS }) {
+export function debuffing (opts={ configfile, logsdir, onerror, onreject, levels: START_LEVELS }) {
 
 	function loadfile(conf){
 		if (!conf) {
-			let dirname = path.join(import.meta.dirname, "debuffer.json");
+			let dirname = path.join(import.meta.dirname, "debuffing.json");
 			if (fs.existsSync(dirname)) enturn({ configfile: dirname })
 			dirname += "5";
 			if (fs.existsSync(dirname)) enturn({ configfile: dirname })
@@ -133,7 +133,7 @@ export function enturn ({ configfile, logsdir, onerror, onreject, levels=START_L
 							let starts = caller.substr(caller.lastIndexOf("/")+1).match(/([^:]+):(\d+):\d+/);
 							if (starts) {
 								let file = starts[1];
-								if (file !== "debuffer.js" || stacker.length === 0) {
+								if (file !== "debuffing.js" || stacker.length === 0) {
 									quit = true;
 									let line = starts[2];
 									let ext = "", didx = file.lastIndexOf(".");

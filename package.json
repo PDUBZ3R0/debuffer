@@ -1,9 +1,9 @@
 {
-  "name": "@PDUBZ3R0/debuffer",
+  "name": "@pdubz3r0/debuffing",
   "version": "1.0.1",
   "exports": {
     ".": "./index.js",
-    "./debuffer": "./features/debuffer.js",
+    "./debuffing": "./features/debuffer.js",
     "./stopwatch": "./features/stopwatch.js",
     "./coloris": "./features/coloris.js",
     "./datadir": "./features/datadir.js",
