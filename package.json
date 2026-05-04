@@ -1,5 +1,5 @@
 {
-  "name": "debuffer",
+  "name": "@PDUBZ3R0/debuffer",
   "version": "1.0.1",
   "exports": {
     ".": "./index.js",
