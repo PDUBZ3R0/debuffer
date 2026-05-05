@@ -24,11 +24,11 @@ export function debuffing (opts={ configfile, logsdir, onerror, onreject, levels
 	function loadfile(conf){
 		if (!conf) {
 			let dirname = path.join(import.meta.dirname, "debuffing.json");
-			if (fs.existsSync(dirname)) enturn({ configfile: dirname })
+			if (fs.existsSync(dirname)) return enturn({ configfile: dirname })
 			dirname += "5";
-			if (fs.existsSync(dirname)) enturn({ configfile: dirname })
+			if (fs.existsSync(dirname)) return enturn({ configfile: dirname })
 		} else {
-			enturn({ configfile: dirname, logsdir, onerror, onreject, levels })
+			return enturn({ configfile: dirname, logsdir, onerror, onreject, levels })
 		}
 	}
 }
