@@ -19,9 +19,9 @@ const START_LEVELS = {
 	$console: Levels.INFO 
 };
 
-export function debuffing (opts={ configfile, logsdir, onerror, onreject, levels: START_LEVELS }) {
+export function debuffing (opts={ levels: START_LEVELS }) {
 
-	(function loadfile(){
+	(function loadfile({ configfile, logsdir, onerror, onreject, levels }){
 		if (!configfile) {
 			let dirname = path.join(import.meta.dirname, "debuffing.json");
 			if (fs.existsSync(dirname)) return enturn({ configfile: dirname })
@@ -30,7 +30,7 @@ export function debuffing (opts={ configfile, logsdir, onerror, onreject, levels
 		} else {
 			return enturn({ configfile, logsdir, onerror, onreject, levels })
 		}
-	})();
+	})(opts);
 }
 
 function enturn ({ configfile, logsdir, onerror, onreject, levels=START_LEVELS }) {
